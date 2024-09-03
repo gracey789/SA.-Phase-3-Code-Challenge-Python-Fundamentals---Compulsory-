@@ -1,0 +1,14 @@
+def decorator_func(func):
+    """
+    A decorator that prints 'Decorator Applied' before calling the function.
+    """
+    def wrapper(*args, **kwargs):
+        print("Decorator Applied")
+        return func(*args, **kwargs)
+    return wrapper
+
+def apply_decorator(func):
+    """
+    Applies decorator_func to the given function.
+    """
+    return decorator_func(func)
